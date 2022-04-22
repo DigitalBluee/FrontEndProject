@@ -1,0 +1,447 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto:wght@400;700&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    font-size: 90%;
+}
+
+nav {
+    background-color: #7250EF;
+    width: 100%;
+    height: 90px;
+
+}
+
+
+
+#general div.desplegable {
+
+    margin-left: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+h1, h2, h3, h4, ul {
+    font-size: 3em;
+    color: #1a1542;
+    font-weight: normal;
+}
+
+h4, ul {
+    font-size: 1.5em;
+
+}
+
+h3 {
+
+    font-family: 'Bebas Neue', cursive;
+    font-size: 2em;
+
+}
+
+
+ul {
+
+
+    /*list-style-type:none;*/
+
+    list-style: none;
+    padding: 0;
+    margin: 0;
+
+
+}
+
+
+li {
+
+    line-height: 2em;
+    border-bottom: 1px solid #d5ccff;
+    padding: 0.5em 0;
+
+}
+
+
+li:last-child {
+
+    border-bottom: none;
+
+}
+
+h1 strong, h2 strong {
+    font-weight: 700;
+}
+
+h2 strong {
+    background-color: #fcee21;
+    padding: 0 0.8em;
+}
+
+
+
+#general, main, header {
+
+    margin: auto;
+    width: 80%;
+
+}
+
+main {
+
+    padding-bottom: 2em;
+
+}
+
+
+header {
+    text-align: center;
+    padding-top: 0.8em;
+}
+
+
+#overlay {
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.5);
+    position: fixed;
+    top: 0;
+    left: 0;
+   display: none;
+    /*ocultamos el overlay*/
+}
+
+.respuesta {
+color: red; 
+
+}
+
+
+.form-control.is-valid, .was-validated .form-control:valid{
+
+color: lightgreen;
+background-image: url(../imagenes/check.png);
+
+}
+
+#modal {
+    position: absolute;
+    z-index: 2;
+    background-color: white;
+    border-radius: 10px;
+    left: 25vw;
+    top: 25vh;
+    width: 50vw;
+    display: flex;
+    flex-direction: column;
+    padding: 1em;
+    animation: miAnimacion 10s linear paused;
+}
+
+
+
+@keyframes miAnimacion {
+    
+
+from { left: -150px;}
+to { left: 25vw }
+
+
+}
+
+
+
+
+.icon-menu {
+    color: white;
+
+    padding: 1em;
+    display: none;
+
+}
+
+#modal span {
+    margin-left: auto;
+    cursor: pointer;
+}
+
+#modal span:hover {
+
+    color: #7250EF;
+
+}
+
+
+
+
+
+#general {
+    display: flex;
+    align-items: center;
+    height: 90px;
+
+}
+
+nav img {
+    width: 20%;
+}
+
+textarea {
+    resize: none;
+}
+
+textarea.form-control:focus {
+    font-style: italic;
+    box-shadow: none;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 1em;
+    margin-right: 0.5em;
+    text-transform: uppercase;
+
+}
+
+nav a:hover {
+    text-decoration: underline;
+    font-weight: 700;
+}
+
+
+section {
+
+    width: 100%;
+    display: flex;
+
+}
+
+
+section div {
+
+    width: 20%;
+    text-align: center;
+
+    /*display: flex;
+
+flex-direction: column;
+align-items: flex-end;
+justify-content: flex-start;
+*/
+
+}
+
+main section:nth-last-of-type(-n+2) {
+    /*el selector dice que si hay un main y adentro un section y los dos últimos de su tipo empezando desde
+abajo tienen ciertas características*/
+    justify-content: space-around;
+
+}
+
+main section:nth-of-type(2) div {
+    background-color: #d5ccff;
+
+
+}
+
+main section:nth-of-type(2) div img {
+    width: 100%;
+
+}
+
+main section:nth-of-type(2) div h4 {
+
+    text-transform: capitalize;
+    /*transformar la primer letra de cada palabra en mayúscula*/
+    margin: 0.5em;
+
+}
+
+
+main section:last-of-type div {
+
+    width: 40%;
+    text-align: left;
+
+
+
+
+}
+
+
+main section:last-of-type div:nth-child(2) {
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+
+
+
+
+}
+
+/*footer*/
+footer {
+
+
+    display: flex;
+    height: 30vh;
+    align-items: flex-start;
+    font-size: 1em;
+    width: 100%;
+    border-top: 1px solid #7250EF;
+    padding: 1em;
+
+
+}
+
+
+
+main section:last-of-type {
+
+    border: 1px solid #7250EF;
+    padding: 1em;
+    margin-top: 2em;
+
+}
+
+
+footer img {
+
+    margin-right: 1.4em;
+
+}
+
+
+
+
+@media(max-width:768px) {
+    body {
+        font-size: 70%;
+    }
+
+
+    #modal {
+
+        width: 80vw;
+        left: 10vw;
+        top: 25vh;
+    }
+
+    nav img {
+        width: 60%;
+    }
+
+
+    main section:nth-last-of-type(-n+2), #general div {
+
+
+        flex-direction: column;
+    }
+
+    main section:last-of-type div {
+
+        width: 100%;
+
+    }
+
+
+
+    main section:last-of-type div:first-of-type li:last-child {
+
+        border-bottom: 1px solid #d5ccff;
+
+    }
+
+    main section:nth-of-type(2) div {
+        width: 80%;
+        margin: 0.5em auto;
+
+
+    }
+
+    footer {
+
+        justify-content: center;
+
+    }
+
+    section:first-of-type {
+
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    section:first-of-type div {
+        width: 30%;
+
+    }
+
+
+    .icon-menu {
+        display: inline;
+
+    }
+
+    #general div.desplegable {
+
+        position: relative;
+        margin-left: 0.5em;
+        width: 50%;
+        align-items: flex-start;
+
+    }
+
+    .contenido {
+        width: 100%;
+        position: absolute;
+        height: auto;
+        top: 0;
+        left: 45px;
+        background-color: white;
+        display: none;
+
+    }
+
+
+    .contenido a {
+
+        margin: 0;
+        display: block;
+        color: black;
+        font-size: 1.5em;
+        width: 100%
+    }
+
+
+    .desplegable:hover .contenido {
+
+        display: block;
+
+    }
+
+
+    @keyframes miAnimacion {
+    
+
+        from { left: -150px;}
+        to { left: 10vw }
+        
+        
+        }
+
+
+}
+
+@media print {
+    /*acá destinamos los estilos cuando queremos imprimir nuestra interfaz
+ p, h4,h3,h2,ul,h1  { color: red;}
+*/
+}

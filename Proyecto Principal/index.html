@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estudio Contable</title>
+    <!--vinculación a js de Bootstrap-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+
+<!--style de los iconos de icomoon-->
+    <link rel="stylesheet" href="css/style.css">
+<!--style de Boostrap-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+<!--style mío-->
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+
+<body>
+    <div id="overlay">
+
+        <div id="modal">
+<span onclick="cerrar();"> X </span>     
+
+<form class="p-4 needs-validation" novalidate action="php/codigo.php" method="post">
+
+<label  class="form-label" for="nombre">Nombre:</label>
+<input class="form-control" type="text" placeholder="Juan Rodriguez" required name="nombre" id="nombre">
+<div class="invalid-feedback">
+   Te olvidaste el nombre!!!!!
+  </div>
+
+  <div class="valid-feedback">
+  Muy bien completaste correctamente tu información!
+   </div>
+<label class="form-label"  for="email">Dirección de correo electrónico:</label>
+<input class="form-control" type="email" placeholder="email@midominio.com" required name="email" id="email">
+<div class="invalid-feedback">
+   Te olvidate el e-mail
+   </div>
+ 
+   <div class="valid-feedback">
+   Muy bien completaste correctamente tu email!
+    </div>
+<label  class="form-label" for="comentarios">Comentarios:</label>
+<textarea class="form-control"  placeholder="comentario..." required name="comentarios" id="comentarios"></textarea>
+<label class="form-label" for="menu">Pais de origen</label>
+<select class="form-select" name="menu" required id="menu">
+<option selected disabled value="">Elegir pais</option>
+<option value="argentina">Argentina</option>
+<option value="uruguay">Uruguay</option>
+<option value="brasil">Brasil</option>
+<option value="paraguay">Paraguay</option>
+</select>
+
+<div class="form-check">
+<input class="form-check-input" type="checkbox" required value="">
+<label  class="form-label" for="acepto">Quiero enviar el formulario</label> </div>
+
+<button class="btn btn-secondary">Enviar</button>
+
+
+
+</form>
+
+        </div>
+
+
+    </div>
+    <nav>
+        <div id="general">
+            <img src="imagenes/AlternativaContable_logo.png" title="logo ac contable" alt="alternativa contable logo">
+
+            <div class="desplegable">
+                <span class="icon-menu"></span>
+               <div class="contenido">
+                <a href="javascript:void(0);" onclick="abrir();" title="Mandame un mail a info@accontable.com">contacto</a>
+                <a href="http://www.instagram.com" target="_blank"
+                    title="Vinculo a ac contable instagram">instragram</a>
+                
+                </div>
+            </div>
+            <!--contenedor de los vinculos-->
+        </div>
+    </nav>
+
+    <header>
+
+        <h1>No somos cualquier estudio contable, <strong>
+                somos tus aliados:</strong></h1>
+        <h2> Te ayudamos a pagar de forma legal <br>
+            <strong>
+                lo menos posible de impuestos.</strong>
+        </h2>
+
+
+
+    </header>
+
+
+    <main>
+        <h3> Nuestras propuestas</h3>
+        <section>
+
+            <div>
+                <img src="imagenes/servicioMensual.png" alt="servicio mensual">
+                <h4>Servicio mensual</h4>
+            </div>
+            <!--primer div con imagen 20% desde css-->
+            <div>
+                <img src="imagenes/asesoriaOnline.png" alt="asesoría online">
+                <h4>Asesoría online</h4>
+            </div>
+            <!--segundo div con imagen 20% desde css-->
+            <div>
+                <img src="imagenes/Talleres.png" alt="talleres y cursos">
+                <h4>Talleres y cursos</h4>
+            </div>
+            <!--tercer div con imagen 20% desde css-->
+            <div>
+                <img src="imagenes/Podcast.png" alt="podcast">
+                <h4> Podcast</h4>
+            </div>
+            <!--cuarto div con imagen 20% desde css-->
+            <div>
+                <img src="imagenes/Newsletter.png" alt="newsletter">
+                <h4>Newsletter</h4>
+            </div>
+            <!--quinto div con imagen 20% desde css-->
+
+
+        </section>
+        <!--primera sección-->
+        <h3> Conocé al team </h3>
+        <section>
+            <div>
+                <img src="imagenes/Sole.png" alt="Sole sanabria">
+                <h4>Sole sanabria</h4>
+
+            </div>
+            <div><img src="imagenes/Juampi.png" alt="juanpi armando">
+                <h4>juanpi armando </h4>
+            </div>
+            <div><img src="imagenes/Luciana.png" alt="luciana petroni">
+                <h4>luciana petroni</h4>
+            </div>
+            <div><img src="imagenes/Gonza.png" alt="gonza dänbal">
+                <h4>gonza dänbal</h4>
+            </div>
+
+
+        </section> <!--segunda sección-->
+
+
+     <section>
+        <div>
+<h3>últimas novedades</h3>
+
+
+<ul>
+    <li class="bg-warning ps-3">ARBA Calendario fiscal 2022</li>
+    <li>CABA Vencimientos 2022</li>
+    <li>¿Qué es el SIMPLES?</li>
+</ul>
+
+</div> <!--primer contenedor de la última sección-->
+
+<div>
+<ul>
+    <li>Doble indemnización: reducción gradual</li>
+    <li>Beneficio para contribuyentes cumplidores</li>
+    <li>Ley de Alivio Fiscal: conocé los beneficios</li>
+</ul>
+</div> <!--segundo contenedor de la última sección-->
+
+
+
+
+
+
+
+
+
+     </section>   
+
+
+
+
+
+    </main>
+
+<footer>
+<img src="imagenes/AC.png" alt="ac logo footer">
+  <address> <p>(54 11) 0000 0000 / Av. Dirección 1234 (C1234 BCW) Buenos Aires, Argentina</p></address> 
+
+
+
+
+
+</footer>
+
+<script>
+
+
+// Example starter JavaScript for disabling form submissions if there are invalid fields
+(function () {
+  'use strict'
+
+  // Fetch all the forms we want to apply custom Bootstrap validation styles to
+  var forms = document.querySelectorAll('.needs-validation')
+
+  // Loop over them and prevent submission
+  Array.prototype.slice.call(forms)
+    .forEach(function (form) {
+      form.addEventListener('submit', function (event) {
+        if (!form.checkValidity()) {
+          event.preventDefault()
+          event.stopPropagation()
+        }
+
+        form.classList.add('was-validated')
+      }, false)
+    })
+})()
+
+
+</script>
+
+
+
+<script src="js/codigo.js"></script>
+
+</body>
+
+</html>
